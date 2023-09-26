@@ -13,6 +13,13 @@ TOKEN = ""
 
 file_path = "config.json"
 config = {}
+if not os.path.exists(file_path):
+    with open(file_path, "w") as f:
+            json.dump({
+                "clientName": "",
+                "url": "",
+                "token": ""
+            }, f)
 if os.path.exists(file_path):
     with open(file_path, "r") as f:
         config = json.load(f)
