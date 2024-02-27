@@ -137,6 +137,7 @@ def input_read():
         user_input = input()
         if user_input == "exit":
             ws.close()
+            exit()
             break
         else:
             print("Enter 'exit' to quit: ")
